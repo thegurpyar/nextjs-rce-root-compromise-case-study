@@ -30,18 +30,18 @@ id
 cat /etc/passwd
 ```
 
-Phase 4: Privilege Escalation
+## Phase 4: Privilege Escalation
 
 Attacker discovered sudo access
 
 Executed:
-
+```bash
 sudo -i
-
+```
 
 Root shell obtained immediately
 
-Phase 5: Persistence Setup
+## Phase 5: Persistence Setup
 
 Persistence mechanisms added:
 
@@ -51,7 +51,7 @@ root cron @reboot job
 
 hidden binaries in system paths
 
-Phase 6: Payload Deployment
+## Phase 6: Payload Deployment
 
 xmrig miner downloaded and extracted
 
@@ -61,7 +61,7 @@ Miner connected to Monero pool
 
 CPU usage reached ~100%
 
-Phase 7: Detection & Response
+## Phase 7: Detection & Response
 
 Performance degradation noticed
 
